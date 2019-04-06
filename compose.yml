@@ -1,0 +1,13 @@
+services:
+  sleeper:
+    shell: true
+    command: "sleep 10000000;echo abcd|grep a"
+    asd: asd
+
+  looper:
+    shell: true
+    command: "for i in $(seq 1 200);do echo $i;sleep 1;done"
+    environment:
+      RACK_ENV: development
+      SHOW: 'true'
+      SESSION_SECRET:
